@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Wave Cleanup</title>
+    <script>
+        function myfunction(){
+         window.location.href="submitformparticipant.html";
+         }
+         </script>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Wave Cleanup</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Updates.html">Updates</a></li>
+            <!--<li><a href="Registration1.html">Registration</a></li>-->
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <img src="stars.png" id="stars">
+        <div class="container">
+            <h1>Beach Cleaning Drive Participation Form for Methi River Drive</h1>
+            <form id="participationForm" action="#" method="POST">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" number="age" min="10" max="65" required>
+
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+                <label for="availability">Want Gum boots and gloves</label>
+                <select id="availability" name="availability" required>
+                    <option value="full-time">Yes</option>
+                    <option value="part-time">No</option>
+                </select>
+
+                <input type="submit" onclick="myfunction()">
+            </form>
+        </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 500px;
+            margin-top: 35px;
+            background: transparent;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: aliceblue;
+        }
+
+        form {
+            display: flex;
+            height: 65vh;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            padding: 10px;
+            background: transparent;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+            border-radius: 19px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    </section>
+
+    <script>
+        let stars = document.getElementById('stars');
+
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Wavecleanup. All rights reseved.</p>
+    </footer>
+
+</body>
+
+</html>

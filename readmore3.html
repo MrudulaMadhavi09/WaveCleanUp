@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Wave Cleanup</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Wave Cleanup</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Cleanups</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#">Reports</a></li>
+         <li><a href="#">About Us</a></li>
+      </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+      <p>On September 17, 2023, Dadar Beach in Mumbai, India, witnessed a remarkable beach cleanup event orchestrated by a dedicated Non-Governmental Organization (NGO). The event's primary objectives were environmental restoration, raising awareness about the harmful impact of beach litter, and fostering community engagement in environmental conservation. Over 300 volunteers, including students, local residents, and environmental enthusiasts, joined hands to meticulously collect litter, with a focus on plastic waste, glass fragments, and cigarette butts. The collected waste underwent careful segregation to highlight the importance of responsible waste disposal and recycling. Environmental experts conducted educational workshops and seminars, emphasizing marine conservation and waste management practices. As a result, the event significantly improved the cleanliness and aesthetic appeal of Dadar Beach, removing a substantial amount of waste and identifying recyclables in 65% of the collected materials. Beyond its tangible outcomes, the event strengthened community bonds and heightened awareness about the critical need to protect coastal environments and marine ecosystems. It underscored the potential for collective action in addressing environmental challenges, leaving an enduring mark on both the local environment and the community's commitment to environmental preservation.</p>
+      
+        
+    </section>
+    <script>
+      let stars = document.getElementById('stars');
+     
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+
+      let header = document.querySelector('header');
+
+      window.addEventListener('scroll', function(){
+          let value = window.scrollY;
+          stars.style.left = value * 0.25 + 'px';
+          moon.style.top = value * 1.05 + 'px';
+          mountains_behind.style.top = value * 0.5 + 'px';
+          mountains_front.style.top = value * 0 + 'px';
+          text.style.marginRight = value * 4 + 'px';
+          text.style.marginTop = value * 1.5 + 'px';
+          btn.style.marginTop = value * 1.5 + 'px';
+          header.style.top = value * 0.5 + 'px';
+      })
+  </script>
+    
+ <footer>
+        <p>&copy; 2023 Wavecleanup. All rights reseved.</p>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Wave Cleanup</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Wave Cleanup</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Updates.html">Updates</a></li>
+        <!--<li><a href="Registration1.html">Registration</a></li>-->
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="report.html">Reports</a></li>
+         <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+
+       <div> 
+        <h1> What is Beach Cleaning</h1><br>
+        <p>"Beach cleaning involves removing trash and debris from beaches and coastal areas, promoting cleanliness, ecological health, and beauty. It includes collecting litter, sorting recyclables, proper disposal, handling hazardous materials, data collection, and educational outreach. This activity is vital for preventing pollution and protecting marine life while maintaining appealing coastlines."</p><br>
+        <h1> Why is it necessary? </h1>
+        <p> Beach cleaning is essential to safeguard our coastlines and marine ecosystems. It helps prevent pollution, ensures the safety of beachgoers, and maintains the aesthetic appeal of our shores. Beyond that, it contributes to the well-being of marine life by removing harmful debris that can harm or be ingested by aquatic creatures. Additionally, clean beaches are crucial for tourism, which supports local economies and jobs. In essence, beach cleaning is a silent hero in preserving our natural treasures and promoting sustainable coastal living.</p><br>
+        <h1> How does it help our Environment and Protect our Future </h1><br>
+        <p> Beach clean-up initiatives have a multifaceted impact on society and the environment. They engage local communities, raise environmental awareness, and educate participants about the consequences of marine pollution. Moreover, these efforts help preserve the natural beauty of coastal areas and safeguard marine life by removing harmful trash and debris. Clean beaches not only attract tourists but also support local economies. Additionally, the data collected during clean-ups informs research and policy-making, promoting stronger regulations and eco-friendly practices. These initiatives also contribute to global pollution reduction, protecting marine ecosystems worldwide. Furthermore, they encourage individuals to adopt responsible consumption habits and sustainable practices, fostering long-term behavioral change for a cleaner, healthier planet.</p><br>
+    </div>
+    </section>
+    <style>
+        h1{
+            color: rgb(166, 188, 207);
+            animation: moveText 3s ;
+        }
+        p{
+            color: rgb(220, 193, 244);
+            animation: moveText 3s;
+        }
+
+        @keyframes moveText {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(100px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+   
+    <script>
+      let stars = document.getElementById('stars');
+     
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+
+      let header = document.querySelector('header');
+
+      window.addEventListener('scroll', function(){
+          let value = window.scrollY;
+          stars.style.left = value * 0.25 + 'px';
+          moon.style.top = value * 1.05 + 'px';
+          mountains_behind.style.top = value * 0.5 + 'px';
+          mountains_front.style.top = value * 0 + 'px';
+          text.style.marginRight = value * 4 + 'px';
+          text.style.marginTop = value * 1.5 + 'px';
+          btn.style.marginTop = value * 1.5 + 'px';
+          header.style.top = value * 0.5 + 'px';
+      })
+  </script>
+    
+ <footer>
+      <p>&copy; 2023 Wavecleanup. All rights reseved.</p>
+  </footer>
+
+  </body>
+</html>

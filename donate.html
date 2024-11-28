@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Wave Cleanup</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Wave Cleanup</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Updates.html">Updates</a></li>
+        <!--<li><a href="Registration1.html">Registration</a></li>-->
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="report.html">Reports</a></li>
+         <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <div class="container">
+            <h1>Donate for Beach Cleanups</h1>
+            <form id="donationForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="amount">Donation Amount (Rs):</label>
+                <input type="number" id="amount" name="amount" min="100" step="10" required>
+    
+                <button type="submit">Donate</button>
+            </form>
+        </div>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 30px;
+    width: 500px;
+    padding: 20px;
+    background: transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+h1 {
+    text-align: center;
+    color: aliceblue;
+}
+
+form {
+    display: flex;
+    height: 37vh;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] 
+select,
+textarea {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    background: transparent;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 26px;
+    border-radius: 19px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style> 
+      
+        
+    </section>
+    <script>
+      let stars = document.getElementById('stars');
+     
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+
+      let header = document.querySelector('header');
+
+      window.addEventListener('scroll', function(){
+          let value = window.scrollY;
+          stars.style.left = value * 0.25 + 'px';
+          moon.style.top = value * 1.05 + 'px';
+          mountains_behind.style.top = value * 0.5 + 'px';
+          mountains_front.style.top = value * 0 + 'px';
+          text.style.marginRight = value * 4 + 'px';
+          text.style.marginTop = value * 1.5 + 'px';
+          btn.style.marginTop = value * 1.5 + 'px';
+          header.style.top = value * 0.5 + 'px';
+
+          // script.js
+//document.getElementById("donationForm").addEventListener("submit", function (e) {
+  //  e.preventDefault();
+    
+    //const name = document.getElementById("name").value;
+    //const email = document.getElementById("email").value;
+    //const amount = parseFloat(document.getElementById("amount").value);
+    
+    // You can send the donation information to a server or perform other actions here.
+    
+    // For demonstration purposes, we'll just alert the user with a thank you message.
+  //  alert(`Thank you, ${name}! Your donation of $${amount.toFixed(2)} has been received.`);
+    
+    // Clear the form fields
+   // document.getElementById("donationForm").reset();
+});
+
+      
+  </script>
+    
+ <footer>
+        <p>&copy; 2023 Wavecleanup. All rights reseved.</p>
+    </footer>
+
+  </body>
+</html>

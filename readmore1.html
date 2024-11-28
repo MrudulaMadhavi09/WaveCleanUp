@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Wave Cleanup</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Wave Cleanup</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Cleanups</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#">Reports</a></li>
+         <li><a href="#">About Us</a></li>
+      </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+      
+        <p> On September 9, 2023, a substantial beach cleanup initiative unfolded at Juhu Beach in Mumbai, orchestrated by a coalition of local environmental enthusiasts, volunteers, and backed by government entities. This event, characterized by its concerted efforts, aimed to rectify the littered state of the coastline. Over 500 dedicated volunteers, including students, residents, and members of environmental organizations, united their efforts in the collection and responsible disposal of various types of waste, prominently plastic waste, and cigarette butts. Moreover, the collected waste underwent meticulous segregation, distinguishing recyclables from non-recyclables. In addition to the cleanup activities, informative workshops and seminars led by environmental experts furthered awareness about marine conservation, waste management, and recycling among participants and the community. As a testament to its success, this event saw the removal of over 2,000 kilograms of waste, signifying a substantial enhancement in Juhu Beach's cleanliness and aesthetic appeal. Furthermore, it emphasized the critical need for community involvement in preserving coastal environments and marine ecosystems, effectively demonstrating that collective action holds the key to addressing environmental challenges effectively.</p>
+      
+      
+        
+    </section>
+    <script>
+      let stars = document.getElementById('stars');
+     
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+
+      let header = document.querySelector('header');
+
+      window.addEventListener('scroll', function(){
+          let value = window.scrollY;
+          stars.style.left = value * 0.25 + 'px';
+          moon.style.top = value * 1.05 + 'px';
+          mountains_behind.style.top = value * 0.5 + 'px';
+          mountains_front.style.top = value * 0 + 'px';
+          text.style.marginRight = value * 4 + 'px';
+          text.style.marginTop = value * 1.5 + 'px';
+          btn.style.marginTop = value * 1.5 + 'px';
+          header.style.top = value * 0.5 + 'px';
+      })
+      
+  </script>
+    
+ <footer>
+        <p>&copy; 2023 Wavecleanup. All rights reseved.</p>
+    </footer>
+
+  </body>
+</html>

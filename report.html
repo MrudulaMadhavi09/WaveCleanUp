@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Wave Cleanup</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Wave Cleanup</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Updates.html">Updates</a></li>
+            <!--<li><a href="registration.html">Registration</a></li>-->
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </header>
+    <section>
+
+        <div class="reportheading">
+            <h1> Previous Drives</h1>
+        </div>
+
+
+        <img src="stars.png" id="stars">
+
+        <div class="report-card">
+            <h2>Drive 1</h2>
+            <p class="fade-in">The Drive by Wave Cleanup on Juhu beach  was a success, conducted on 09|09|2023<a href="readmore1.html"> Read more.</a></p>
+        </div>
+        <div class="report-card">
+            <h2>Drive 2</h2>
+            <p class="fade-in">The drive by Wave Cleanup on varsova beach was successfully completed on 10|09|2023.<a href="readmore2.html"> Read more.</a></p>
+        </div>
+        <div class="report-card">
+            <h2>Drive 3</h2>
+            <p class="fade-in">The drive by Wave Cleanup in Dadar beach which was conducted on 17|09|2023 was successful<a href="readmore3.html"> Read more.</a></p>
+        </div>
+
+
+    </section>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style the report cards 
+        .reports {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }*/
+
+        .report-card {
+            background-color: #7db8fc;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 9px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        p.fade-in {
+            font-size: 16px;
+            opacity: 0.1;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Add hover effect to report cards */
+        .report-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Fade-in animation for the text */
+        .report-card.active p.fade-in {
+            opacity: 1;
+        }
+    </style>
+
+    <script>
+        let stars = document.getElementById('stars');
+
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const reportCards = document.querySelectorAll(".report-card");
+            reportCards.forEach(function (card) {
+                card.classList.add("active");
+            });
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Wavecleanup. All rights reseved.</p>
+    </footer>
+
+</body>
+
+</html>

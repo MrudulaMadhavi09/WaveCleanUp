@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Wave Cleanup</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Wave Cleanup</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Cleanups</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#">Reports</a></li>
+         <li><a href="#">About Us</a></li>
+      </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+      
+     <p>On September 10, 2023, a commendable beach cleanup initiative was orchestrated by a dedicated NGO at Varsova Beach in Mumbai. This environmentally conscious endeavor attracted numerous volunteers who were eager to make a positive impact on their local coastal environment. Under the careful guidance of the NGO, participants diligently collected and disposed of various forms of litter, with a particular emphasis on plastic waste and debris. The event not only improved the cleanliness and aesthetic appeal of Varsova Beach but also served as a potent reminder of the importance of responsible waste management and environmental stewardship. It exemplified the potential for NGOs to mobilize communities and bring about positive change, underlining the collective responsibility we share in safeguarding our precious natural resources and coastal ecosystems.</p> 
+        
+    </section>
+    <script>
+      let stars = document.getElementById('stars');
+     
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+
+      let header = document.querySelector('header');
+
+      window.addEventListener('scroll', function(){
+          let value = window.scrollY;
+          stars.style.left = value * 0.25 + 'px';
+          moon.style.top = value * 1.05 + 'px';
+          mountains_behind.style.top = value * 0.5 + 'px';
+          mountains_front.style.top = value * 0 + 'px';
+          text.style.marginRight = value * 4 + 'px';
+          text.style.marginTop = value * 1.5 + 'px';
+          btn.style.marginTop = value * 1.5 + 'px';
+          header.style.top = value * 0.5 + 'px';
+      })
+  </script>
+    
+ <footer>
+        <p>&copy; 2023 Wavecleanup. All rights reseved.</p>
+    </footer>
+
+  </body>
+</html>

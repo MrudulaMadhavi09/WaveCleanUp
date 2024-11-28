@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Wave Cleanup</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Wave Cleanup</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Registration1.html">Registration</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="report.html">Reports</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+
+
+        <div class="container">
+            <h1>NGO Details Form</h1>
+            <br>
+            <form action="#" method="POST">
+                <label for="ngoName">NGO Name:</label>
+                <input type="text" id="ngoName" name="ngoName" required>
+
+                <label for="ngoType">NGO Type:</label>
+                <select id="ngoType" name="ngoType" required>
+                    <option value="non-profit">Non-Profit</option>
+                    <option value="charity">Charity</option>
+                    <option value="human-rights">Human Rights</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <label for="contactPerson">Contact Person:</label>
+                <input type="text" id="contactPerson" name="contactPerson" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            .container {
+                margin-top: 35px;
+                width: 500px;
+                padding: 20px;
+                background: transparent;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+
+            h1 {
+                text-align: center;
+                color: aliceblue;
+            }
+
+            form {
+                display: flex;
+                height: 65vh;
+                flex-direction: column;
+            }
+
+            label {
+                font-weight: bold;
+                color: #fff;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            select,
+            textarea {
+                padding: 6px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                font-size: 16px;
+                background: transparent;
+
+            }
+
+            button {
+                background-color: #007bff;
+                color: #fff;
+                padding: 10px;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                font-size: 16px;
+                margin-top: 15px;
+                border-radius: 19px;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+
+
+    </section>
+    <script>
+        let stars = document.getElementById('stars');
+
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Wavecleanup. All rights reseved.</p>
+    </footer>
+
+</body>
+
+</html>
